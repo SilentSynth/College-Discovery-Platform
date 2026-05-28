@@ -6,7 +6,7 @@ function escapeXml(value: string) {
 
 export function getCollegeImageUrl(college: Pick<College, 'name' | 'location' | 'imageColor' | 'image'>) {
   if (college.image) {
-    if (/^https?:\/\//i.test(college.image) || college.image.startsWith('data:')) {
+    if (/^https?:\/\//i.test(college.image) || college.image.startsWith('data:') || college.image.startsWith('/')) {
       return college.image;
     }
 

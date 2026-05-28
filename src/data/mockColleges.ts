@@ -14,7 +14,7 @@ export const mockColleges: College[] = [
     description: 'Premier engineering institute with top-tier placements and research.',
     highlights: ['Top research', 'Elite placements', 'Strong alumni'],
     tags: ['Engineering', 'IIT', 'Top Tier'],
-    image: 'iitbombay.jpg',
+    image: '/iitbombay.jpg',
     imageColor: 'from-indigo-900 via-slate-800 to-ink-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Computer Science and Engineering', duration: '4 years', tuition: '2.50 LPA' },
@@ -39,7 +39,7 @@ export const mockColleges: College[] = [
     description: 'Top IIT with broad recruiter footprint and interdisciplinary opportunities.',
     highlights: ['Urban access', 'Research', 'Placements'],
     tags: ['Engineering', 'IIT'],
-    image: 'iitdelhi.jpg',
+    image: '/iitdelhi.jpg',
     imageColor: 'from-rose-900 via-slate-800 to-ink-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Computer Science', duration: '4 years', tuition: '2.40 LPA' },
@@ -64,7 +64,7 @@ export const mockColleges: College[] = [
     description: 'Premier IIT with deep research strength, elite placements, and a strong startup ecosystem.',
     highlights: ['Elite CSE', 'Research-heavy', 'Startup ecosystem'],
     tags: ['Engineering', 'IIT', 'Premier'],
-    image: 'iitmadras.jpg',
+    image: '/iitmadras.jpg',
     imageColor: 'from-indigo-900 via-slate-800 to-ink-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Computer Science and Engineering', duration: '4 years', tuition: '2.50 LPA' },
@@ -89,7 +89,7 @@ export const mockColleges: College[] = [
     description: 'Premium private university known for flexible academics and strong outcomes.',
     highlights: ['Flexible curriculum', 'Strong alumni', 'Premium recruiter mix'],
     tags: ['Engineering', 'Private University'],
-    image: 'bitspilani.jpg',
+    image: '/bitspilani.jpg',
     imageColor: 'from-amber-900 via-stone-800 to-slate-700',
     courses: [
       { degree: 'B.E.', specialization: 'Computer Science', duration: '4 years', tuition: '4.25 LPA' },
@@ -114,7 +114,7 @@ export const mockColleges: College[] = [
     description: 'Research-intensive institute with strong industry partnerships and a modern CS focus.',
     highlights: ['Research-led curriculum', 'Strong CS placements', 'Startup ecosystem'],
     tags: ['Engineering', 'Research', 'Tech'],
-    image: 'iiitbanglore.jpg',
+    image: '/iiitbanglore.jpg',
     imageColor: 'from-slate-900 via-slate-800 to-ink-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Computer Science and Engineering', duration: '4 years', tuition: '3.05 LPA' },
@@ -139,7 +139,7 @@ export const mockColleges: College[] = [
     description: 'Respected state engineering college with strong brand recall, affordability, and access to the Mumbai job market.',
     highlights: ['Low fees', 'Mumbai location', 'Good core branches'],
     tags: ['Engineering', 'State College', 'Affordable'],
-    image: 'vjti.jpg',
+    image: '/vjti.jpg',
     imageColor: 'from-blue-900 via-indigo-800 to-slate-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Electronics and Telecommunication', duration: '4 years', tuition: '0.92 LPA' },
@@ -164,7 +164,7 @@ export const mockColleges: College[] = [
     description: 'One of the strongest NITs with disciplined academics, stable placements, and broad recruiter interest.',
     highlights: ['Strong placements', 'Well-known NIT brand', 'Balanced cost'],
     tags: ['Engineering', 'NIT', 'Placements'],
-    image: 'nittrichy.jpg',
+    image: '/nittrichy.jpg',
     imageColor: 'from-red-900 via-rose-800 to-slate-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Computer Science and Engineering', duration: '4 years', tuition: '1.70 LPA' },
@@ -189,7 +189,7 @@ export const mockColleges: College[] = [
     description: 'A coastal NIT with strong engineering outcomes, vibrant campus life, and consistently solid placements.',
     highlights: ['Great ROI', 'Coastal campus', 'Reliable placements'],
     tags: ['Engineering', 'NIT', 'Value'],
-    image: 'nitsurathkal.jpg',
+    image: '/nitsurathkal.jpg',
     imageColor: 'from-cyan-900 via-teal-800 to-slate-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Computer Science and Engineering', duration: '4 years', tuition: '1.65 LPA' },
@@ -214,7 +214,7 @@ export const mockColleges: College[] = [
     description: 'A large private university with broad branch availability, a diverse student population, and steady placement access.',
     highlights: ['Broad branch mix', 'Large campus', 'Diverse recruiter base'],
     tags: ['Engineering', 'Private University', 'Large Intake'],
-    image: 'vitv.jpeg',
+    image: '/vitv.jpeg',
     imageColor: 'from-blue-900 via-sky-800 to-slate-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Computer Science and Engineering', duration: '4 years', tuition: '2.80 LPA' },
@@ -239,7 +239,7 @@ export const mockColleges: College[] = [
     description: 'A large private university with extensive infrastructure, many program choices, and a highly active student life.',
     highlights: ['Massive campus', 'Many programs', 'Industry exposure'],
     tags: ['Engineering', 'Private University', 'Metro Access'],
-    image: 'srm.jpg',
+    image: '/srm.jpg',
     imageColor: 'from-violet-900 via-purple-800 to-slate-700',
     courses: [
       { degree: 'B.Tech', specialization: 'Computer Science and Engineering', duration: '4 years', tuition: '2.40 LPA' },
@@ -264,7 +264,7 @@ export const mockColleges: College[] = [
     description: 'A well-known private university with a strong alumni network and an established engineering reputation.',
     highlights: ['Alumni strength', 'Good placements', 'Modern campus'],
     tags: ['Engineering', 'Private University', 'North India'],
-    image: 'thapar.jpg',
+    image: '/thapar.jpg',
     imageColor: 'from-orange-900 via-amber-800 to-slate-700',
     courses: [
       { degree: 'B.E.', specialization: 'Computer Engineering', duration: '4 years', tuition: '3.10 LPA' },
