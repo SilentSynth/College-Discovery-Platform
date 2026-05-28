@@ -25,8 +25,8 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="mx-auto flex min-h-[40vh] max-w-xl flex-col items-center justify-center gap-4 px-4 text-center">
-          <h2 className="text-2xl font-semibold text-slate-900">Something went wrong</h2>
-          <p className="text-sm text-slate-600">A data or rendering error interrupted this view. Refresh the page to try again.</p>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">Something went wrong</h2>
+          <p className="text-sm text-slate-600 dark:text-slate-400">A data or rendering error interrupted this view. Refresh the page to try again.</p>
           <Button onClick={() => this.setState({ hasError: false })}>Retry</Button>
         </div>
       );

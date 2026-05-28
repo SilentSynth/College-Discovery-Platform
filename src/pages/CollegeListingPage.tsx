@@ -1,15 +1,16 @@
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useColleges } from '../hooks/useColleges';
 import { useDebouncedValue } from '../hooks/useDebouncedValue';
 import { CollegeFilters } from '../components/college/CollegeFilters';
 import { CollegeGrid } from '../components/college/CollegeGrid';
 import { Pagination } from '../components/college/Pagination';
-import { CompareTray } from '../components/college/CompareTray';
 import { Skeleton } from '../components/ui/Skeleton';
 import type { CollegeListFilters } from '../types/college';
 import { Button } from '../components/ui/Button';
 import { getDefaultListingFilters, parseListingFiltersFromSearchParams, serializeListingFiltersToSearchParams } from '../lib/routeState';
+
+const CompareTray = lazy(() => import('../components/college/CompareTray').then((module) => ({ default: module.CompareTray })));
 
 const defaultFilters = getDefaultListingFilters();
 
@@ -36,7 +37,7 @@ export function CollegeListingPage() {
       return (
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {Array.from({ length: 6 }).map((_, index) => (
-            <div key={index} className="rounded-2xl border border-slate-200 bg-white p-4">
+            <div key={index} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
               <Skeleton className="h-28" />
               <Skeleton className="mt-4 h-4 w-3/4" />
               <Skeleton className="mt-2 h-4 w-1/2" />
@@ -48,11 +49,11 @@ export function CollegeListingPage() {
     }
 
     if (query.isError) {
-      return <div className="rounded-3xl border border-rose-200 bg-rose-50 p-6 text-sm text-rose-700">Unable to load colleges right now.</div>;
+      return <div className="rounded-3xl border border-rose-200 bg-rose-50 p-6 text-sm text-rose-700 dark:border-rose-950/50 dark:bg-rose-950/20 dark:text-rose-300">Unable to load colleges right now.</div>;
     }
 
     if (!query.data?.items.length) {
-      return <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-600">No colleges match the current filters.</div>;
+      return <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">No colleges match the current filters.</div>;
     }
 
     return <CollegeGrid colleges={query.data.items} />;
@@ -71,11 +72,11 @@ export function CollegeListingPage() {
         />
 
         <div className="space-y-5">
-          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
-                <h2 className="text-xl font-semibold text-slate-900">College listing</h2>
-                <p className="mt-1 text-sm text-slate-600">Search, filter, and compare colleges from a single responsive grid.</p>
+                <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">College listing</h2>
+                <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">Search, filter, and compare colleges from a single responsive grid.</p>
               </div>
               <Button
                 variant="outline"
@@ -95,7 +96,9 @@ export function CollegeListingPage() {
           {query.data ? <Pagination page={query.data.page} totalPages={query.data.totalPages} onPageChange={(page) => setFilters((current) => ({ ...current, page }))} /> : null}
         </div>
       </section>
-      <CompareTray />
+      <Suspense fallback={null}>
+        <CompareTray />
+      </Suspense>
     </div>
   );
 }

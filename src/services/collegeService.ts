@@ -1,5 +1,6 @@
+import { mockCollegeTrends } from '../data/mockCollegeTrends';
 import { mockColleges } from '../data/mockColleges';
-import type { College, CollegeListFilters, ExamName, PaginatedCollegesResponse } from '../types/college';
+import type { College, CollegeListFilters, CollegeTrendPoint, ExamName, PaginatedCollegesResponse } from '../types/college';
 
 const apiDelay = async (ms = 180) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -77,5 +78,10 @@ export const collegeService = {
         return criteria.rank >= cutoff.minRank && criteria.rank <= cutoff.maxRank;
       }),
     ).sort((left, right) => right.rating - left.rating);
+  },
+
+  async getCollegeTrends(id: string): Promise<CollegeTrendPoint[]> {
+    await apiDelay();
+    return clone(mockCollegeTrends[id] ?? []);
   },
 };

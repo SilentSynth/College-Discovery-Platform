@@ -38,6 +38,7 @@ export interface College {
   description: string;
   highlights: string[];
   tags: string[];
+  image?: string;
   imageColor: string;
   courses: CollegeCourse[];
   placements: PlacementInfo;
@@ -52,6 +53,13 @@ export interface CollegeListFilters {
   minRating: number;
   page: number;
   limit: number;
+}
+
+export interface CollegeTrendPoint {
+  academicYear: string;
+  averagePackageLpa: number;
+  tuitionFeeInr: number;
+  placementRate: number;
 }
 
 export interface PaginatedCollegesResponse {

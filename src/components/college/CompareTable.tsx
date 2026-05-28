@@ -32,10 +32,10 @@ export function CompareTable({ colleges }: CompareTableProps) {
   ];
 
   return (
-    <div className="overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-sm">
+    <div className="overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
       <table className="min-w-[720px] w-full border-collapse">
         <thead>
-          <tr className="bg-slate-50 text-left text-sm text-slate-600">
+          <tr className="bg-slate-50 text-left text-sm text-slate-600 dark:bg-slate-800/70 dark:text-slate-300">
             <th className="border-b border-slate-200 px-4 py-4 font-medium">Metric</th>
             {colleges.map((college) => (
               <th key={college.id} className="border-b border-slate-200 px-4 py-4 font-medium">
@@ -47,9 +47,9 @@ export function CompareTable({ colleges }: CompareTableProps) {
         <tbody>
           {rows.map((row) => (
             <tr key={row.label} className="text-sm">
-              <td className="border-b border-slate-100 bg-slate-50 px-4 py-4 font-medium text-slate-700">{row.label}</td>
+              <td className="border-b border-slate-100 bg-slate-50 px-4 py-4 font-medium text-slate-700 dark:border-slate-800 dark:bg-slate-800/70 dark:text-slate-300">{row.label}</td>
               {row.cells.map((cell, index) => (
-                <td key={`${row.label}-${index}`} className={`border-b border-slate-100 px-4 py-4 ${cell.winner ? 'bg-emerald-50 text-emerald-800' : 'text-slate-700'}`}>
+                <td key={`${row.label}-${index}`} className={`border-b border-slate-100 px-4 py-4 dark:border-slate-800 ${cell.winner ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300' : 'text-slate-700 dark:text-slate-300'}`}>
                   {cell.value}
                 </td>
               ))}

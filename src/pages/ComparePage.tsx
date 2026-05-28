@@ -12,7 +12,7 @@ export function ComparePage() {
 
   const content = useMemo(() => {
     if (selectedCollegeIds.length < 2) {
-      return <div className="rounded-3xl border border-slate-200 bg-white p-8 text-sm text-slate-600">Select at least two colleges from the listing page to compare them side by side.</div>;
+      return <div className="rounded-3xl border border-slate-200 bg-white p-8 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400">Select at least two colleges from the listing page to compare them side by side.</div>;
     }
 
     if (query.isLoading) {
@@ -20,7 +20,7 @@ export function ComparePage() {
     }
 
     if (query.isError || !query.data) {
-      return <div className="rounded-3xl border border-rose-200 bg-rose-50 p-6 text-sm text-rose-700">Unable to load comparison data.</div>;
+      return <div className="rounded-3xl border border-rose-200 bg-rose-50 p-6 text-sm text-rose-700 dark:border-rose-950/50 dark:bg-rose-950/20 dark:text-rose-300">Unable to load comparison data.</div>;
     }
 
     return <CompareTable colleges={query.data.colleges} />;
@@ -28,11 +28,11 @@ export function ComparePage() {
 
   return (
     <div className="space-y-6">
-      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-ink-700">Side-by-side comparison</p>
-            <h2 className="mt-2 text-3xl font-semibold text-slate-900">Compare colleges</h2>
+            <h2 className="mt-2 text-3xl font-semibold text-slate-900 dark:text-slate-100">Compare colleges</h2>
           </div>
           <Button variant="outline" onClick={clearCompare}>
             Clear compare tray
