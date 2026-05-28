@@ -22,9 +22,9 @@ Check out the live deployment here: **[Live Site](https://college-discovery-plat
 <img width="1869" height="895" alt="image" src="https://github.com/user-attachments/assets/cd125565-0033-459c-a5a2-6441ec471939" />
 <img width="1888" height="909" alt="image" src="https://github.com/user-attachments/assets/4adf97ae-9ea9-4923-8e66-3862dcd63e0a" />
 <img width="1884" height="736" alt="image" src="https://github.com/user-attachments/assets/ecd4f8b6-bfd1-483a-b4cd-a2132486454e" />
-<img width="1880" height="889" alt="image" src="https://github.com/user-attachments/assets/f553c339-02fd-4053-bed4-126aa489f131" />
 <img width="1861" height="816" alt="image" src="https://github.com/user-attachments/assets/ee8baf8f-ac08-4915-9292-eb59267b41b3" />
 <img width="1874" height="909" alt="image" src="https://github.com/user-attachments/assets/b029984f-e17f-43b1-805f-3676680807ae" />
+<img width="1880" height="889" alt="image" src="https://github.com/user-attachments/assets/f553c339-02fd-4053-bed4-126aa489f131" />
 
 
 ## 🛠️ Tech Stack
